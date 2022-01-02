@@ -1,0 +1,53 @@
+.class-with-primary, .class-with-secondary, .class-with-tertiary{
+    border-radius: 4px;
+    padding: 19px 63px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-family: 'Sora', sans-serif;
+    border: 1px solid #e49bc9;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.class-with-primary{
+    transition: 400ms;
+    background: linear-gradient(297.24deg, rgba(213, 126, 235, 0.5) 8.25%, rgba(252, 203, 144, 0.5) 91.76%);
+}
+
+.class-with-primary:hover{
+    background: linear-gradient(297.24deg, rgba(213, 126, 235, 0.616) 8.25%, rgba(252, 203, 144, 0.5) 91.76%);
+}
+
+.class-with-secondary{
+    background: none;
+}
+
+.class-with-tertiary{
+    background: linear-gradient(297.24deg, #FBAB7E 8.25%, #F7CE68 91.76%);
+    border-radius: 5px;
+    color: #151515;
+    border: none;
+}
+
+
+
+@media (max-width: 1164px) {
+    .class-with-primary, .class-with-secondary{
+        padding: 15px 43px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 790px) {
+
+    .class-with-primary, .class-with-secondary{
+        padding: 10px 20px;
+        font-size: 14px;
+        justify-content: flex-end;
+    }
+
+}

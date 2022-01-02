@@ -1,0 +1,106 @@
+.amount__values{
+    margin-bottom: 40px;
+}
+
+.amount-name{
+    font-family: Sora;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.info__icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 7px;
+}
+
+.amount__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.amount__value{
+    font-family: Gilroy;
+    font-style: normal;
+    width: 100px;
+    outline: none;
+    background: none;
+    border: 1px solid rgba(202, 202, 202, 0.11);
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.73);
+    font-size: 14px;
+    padding-left: 10px;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+.arrow__down {
+    padding-left: 12px; 
+}
+
+.amount__flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount__flex > .coin__name{
+    padding-left: 5px;
+}
+
+
+.summary__values{
+    font-family: Sora;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+
+.summary-name{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.73);
+}
+
+.summary-primary, .summary-secondary{
+    font-weight: bold;
+    font-size: 14px;
+    text-align: right;
+}
+
+.summary-primary{
+    color: #32BA7C;
+}
+
+.summary-secondary{
+    color: #FFFF;
+    font-size: 14px;
+}
+
+.liquidity__summary > p{
+    font-family: Sora;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.75px;
+}
+
+@media (max-width: 500px) {
+    .coin__name, .amount-name{
+        font-size: 12px;
+    }
+    
+
+    .icon__image{
+        width: 35px;
+        height: 35px;
+    }
+
+}

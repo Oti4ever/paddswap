@@ -1,0 +1,145 @@
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table { 
+  width: 97%;
+  margin: 0 auto; 
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+
+td:nth-of-type(1) { 
+    font-size: 16px;
+    line-height: 28px; 
+    letter-spacing: 0.75px;
+    color: #FFFFFF;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+td { 
+    font-family: Sora;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+td:nth-of-type(3) { 
+    font-family: Sora;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: #009F57;
+}
+
+td > img{
+    margin-right: 10px;
+}
+    
+
+th { 
+  color: white; 
+  font-weight: bold; 
+}
+
+
+td > span{
+    display: block;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.61);
+}
+
+td, th { 
+  padding: 27px; 
+  text-align: left;
+}
+
+thead > tr{
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    color: #FFFFFF;
+}
+
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 836px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+        text-align: justify;
+	}
+		/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border-bottom: 1px solid rgba(110, 96, 96, 0.226); }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		/* border-bottom: 1px solid #eee;  */
+		position: relative;
+        padding-top: 0px;
+        margin-top: 4px;
+		padding-left: 50%; 
+	}
+
+    td:nth-of-type(1) { 
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.75px;
+        color: #FFFFFF;
+        margin: 20px 8px;
+    }
+
+
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 30px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+    td:nth-of-type(3) { 
+        color: #FFFFFF;
+    }
+
+    td> img{
+        width: 30px;
+        margin-right: 5px;
+    }
+    
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Pool";  color: #c7afaf; font-size: 16px;}
+	td:nth-of-type(2):before { content: "Liquidity"; color: #c7afaf; font-size: 16px; }
+	td:nth-of-type(3):before { content: "Tool Yield"; color: #c7afaf; font-size: 16px;}
+	td:nth-of-type(4):before { content: "Reward Coins"; color: #c7afaf; font-size: 16px;}
+	td:nth-of-type(5):before { content: "Volume (24hr)"; color: #c7afaf; font-size: 16px; }
+	td:nth-of-type(6):before { content: "Action"; color: #c7afaf; font-size: 16px;}
+}

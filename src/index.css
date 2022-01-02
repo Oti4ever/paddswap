@@ -1,0 +1,128 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  background: #151515;
+  font: 18px 'Gilroy', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 0.3em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb { 
+  background: linear-gradient(297.24deg, rgba(213, 126, 235, 0.5) 8.25%, rgba(252, 203, 144, 0.5) 91.76%);
+  outline: 1px solid slategrey;
+}
+
+.app{
+  width: 100%;
+  display: flex;
+  scroll-behavior: smooth;
+}
+
+.app > .left__container{
+  position: fixed;
+  width: 285px;
+  height: 100vh;
+  border-right: 1px solid rgba(202, 202, 202, 0.11);
+  background: #151515;
+  z-index: 1000000;
+  color: #FFFFFF;
+}
+
+.logo__container{
+  margin-bottom: 50px;
+  padding: 74px 0px 0px 46px ;
+}
+
+
+li > .link, li > .active__link{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: rgba(202, 202, 202, 0.68);
+  margin-bottom: 40px;
+  cursor: pointer;
+  padding: 0px 0px 0px 67px ;
+  transition: 0.5s;
+}
+
+
+li > .link > img, li > .active__link > img{
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+li > .link > h3, li > .active__link > h3{
+  font-size: 18px;
+  font-family: 'Sora', sans-serif;
+}
+
+li > .active__link{
+  color: #FFFFFF;
+}
+
+
+.app > .right__container{
+  width: 100%;
+  margin-left: 285px;
+    color: whitesmoke;
+}
+
+
+.burger__menu{
+  width: 50px;
+  background: black;
+  box-shadow: -1px -2px 20px rgb(100, 72, 72);
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5000;
+  padding: 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.box{
+  width: 80%;
+  margin: 5px auto;
+  height: 5px;
+  padding: 2px;
+  border-radius: 55px;
+  background: linear-gradient(297.24deg, rgba(213, 126, 235, 0.822) 8.25%, rgb(252, 203, 144) 91.76%);
+}
+
+@media (max-width: 1210px) {
+
+  .burger__menu{
+    display: block;
+  }
+
+  .app > .left__container{
+    left: -100%;
+    transition: 400ms ease-in-out;
+  }
+
+  .app > .left__container.show{
+    left: 0px;
+  }
+
+  .app > .right__container{
+    margin-left: 0px;
+  }
+
+}
